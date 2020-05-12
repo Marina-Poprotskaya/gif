@@ -1,3 +1,12 @@
+@font-face{
+    font-family: 'Perfect DOS VGA 437 Win';
+    src: local('Perfect DOS VGA 437 Win'); 
+    src: url(fonts/perfect_dos_vga_437/Perfect_DOS_VGA_437_Win.ttf);
+    font-weight: 400;
+    font-style: normal;
+    }
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +15,12 @@
 body {
     background-color: #000;
     color: #fff;
-    font-family:  'Roboto Slab', serif;
+    font-family: 'Perfect DOS VGA 437 Win', arial;
     font-size: 10px;
 }
 
 .container {
+    position: relative;
     width: 80%;
     max-width: 1280px;
     margin-left: auto;
@@ -25,65 +35,77 @@ body {
 h2 {
     font-weight: 400;
     font-size: 2rem;
+    color: rgb(59, 255, 52);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title p {
+    color: rgb(59, 255, 52);
 }
 
 .main-line {
-    color: rgb(250, 108, 26);
-    font-weight: 300;
-    font-size: 1.5rem;
+    color: rgb(59, 255, 52);
+    font-size: 1.4rem;
 }
 
-.main-line {
-    font-family: monospace;
+.com-line {
+    color: rgb(59, 255, 52);
+    font-size: 1.4rem; 
     overflow: hidden;
-    white-space: nowrap;  
-    animation:  
-    typing 1s steps(30, end),
-    blink-caret .7s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 30% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
+    word-break: break-all
+}
 
 .success {
     color: #fff;
-    font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .button {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     background-color: transparent;
     width: 160px;
     height: 60px;
     border: 1px solid #fff;
     color: #fff;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-family: 'Perfect DOS VGA 437 Win', arial;
     cursor: pointer;
     transition: all .4s;
     outline: none;
+    opacity: 1;
 }
 
 .button:hover {
-    border: 1px solid rgb(250, 108, 26);;
-    color: rgb(250, 108, 26);
+    border: 1px solid rgb(59, 255, 52);
+    color: rgb(59, 255, 52);;
     transition: all .4s;
+}
+
+.button-hide {
+    opacity: 0;
+}
+
+.logo {
+    position: absolute;
+    width: auto;
+    height: 230px;
+    left: calc(50% - 65px);
 }
 
 .wrapper {
     display: flex;
-    margin-top: 30px;
+    margin-top: 150px;
     flex-direction: column;
     height: calc(100vh - 120px);
+    z-index: 1;
+    opacity: .9;
 }
 
 .col-btn {
@@ -91,17 +113,21 @@ h2 {
 }
 
 @media (max-width: 450px) {
+
+    .container {
+        width: 90%;
+    }
+
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     
-    .main-line {
-        font-size: 1.2rem;
+    .main-line,
+    .success,
+    .com-line{
+        font-size: 1rem;
     }
     
-    .success {
-        font-size: 1.2rem;
-    }
 }
 
 @media (max-width: 360px) {
