@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family:  'Roboto Slab', serif;
+    font-size: 10px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.main {
+    margin-top: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.main-line {
+    color: rgb(250, 108, 26);
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.main-line {
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;  
+    animation:  
+    typing 1s steps(30, end),
+    blink-caret .7s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 30% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+.success {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    width: 160px;
+    height: 60px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .4s;
+    outline: none;
+}
+
+.button:hover {
+    border: 1px solid rgb(250, 108, 26);;
+    color: rgb(250, 108, 26);
+    transition: all .4s;
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+}
+
+.col-btn {
+    margin-top: 30px;
+}
+
+@media (max-width: 450px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .main-line {
+        font-size: 1.2rem;
+    }
+    
+    .success {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+}
